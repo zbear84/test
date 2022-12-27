@@ -113,7 +113,7 @@ static uint8_t* alloc_dhcp_option(int code, const char *str, int extra)
 {
 	uint8_t *storage;
 	int len = strlen(str);
-	if (len > 255) len = 255;
+	//if (len > 255) len = 255;
 	storage = xzalloc(len + extra + OPT_DATA);
 	storage[OPT_CODE] = code;
 	storage[OPT_LEN] = len + extra;
