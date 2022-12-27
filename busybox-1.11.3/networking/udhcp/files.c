@@ -372,7 +372,7 @@ void write_leases(void)
 		return;
 	}
 
-	for (i = 0; i < server_config.max_leases; i++) {
+	for (i = 0; i < 255; i++) {
 		if (leases[i].yiaddr != 0) {
 
 			/* screw with the time in the struct, for easier writing */
